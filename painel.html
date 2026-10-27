@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Painel · Dra. Lurdiane Brandão</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#7a2340">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Allura&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f1ec;--card:#fff;--ink:#2b1d22;--mut:#76666b;--line:#eadfd9;--wine:#7a2340;--wine2:#5e1830;--olive:#6b7a3a;--gold:#c49a5a;--red:#b3261e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:600 15px/1.45 'Nunito',system-ui,sans-serif;min-height:100svh;overflow-x:hidden}
+button,input,select{font:inherit;color:inherit}button{cursor:pointer}
+[hidden]{display:none!important}
+.demo{background:#f4e0e6;color:var(--wine2);font-size:.76rem;text-align:center;padding:6px 12px;font-weight:700}
+.demo a{text-decoration:underline}
+header{position:sticky;top:0;z-index:30;background:var(--wine);color:#fff}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px;max-width:1200px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand b{display:block;font-family:'Allura',cursive;font-weight:400;font-size:1.7rem;line-height:.9;white-space:nowrap}
+.brand small{opacity:.75;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.snd{border:1px solid rgba(255,255,255,.3);background:none;color:#fff;border-radius:999px;width:38px;height:38px;display:grid;place-items:center;flex:0 0 38px}
+.snd.on{background:var(--olive);border-color:var(--olive)}
+nav.tabs{display:flex;gap:4px;max-width:1200px;margin:0 auto;padding:0 12px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{flex:0 0 auto;border:0;background:none;color:#fff;opacity:.65;padding:10px 12px 12px;font-weight:800;border-bottom:3px solid transparent}
+nav.tabs button.on{opacity:1;border-color:var(--gold)}
+nav.tabs b{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:99px;background:var(--gold);color:var(--ink);font-size:.7rem;margin-left:4px}
+main{max-width:1200px;margin:0 auto;padding:16px 16px 80px}
+.view{display:none}.view.on{display:block}
+h2{font-family:'Oswald',sans-serif;font-size:1.8rem;line-height:1.05;color:var(--wine);text-transform:uppercase}
+.sub{color:var(--mut);font-size:.88rem;margin-top:2px}
+.bar{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.btn{border:0;border-radius:10px;padding:10px 14px;font-weight:800;background:var(--wine);color:#fff;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.btn.ol{background:var(--olive)}.btn.gh{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn.rd{background:none;color:var(--red);border:1px solid #efc9c4}
+.btn:active{transform:scale(.97)}
+.filters{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-bottom:14px}
+.filters::-webkit-scrollbar{display:none}
+.filters button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;font-weight:800;font-size:.86rem}
+.filters button.on{background:var(--wine);color:#fff;border-color:var(--wine)}
+.filters small{opacity:.6;margin-left:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.ac{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.ac.new{border-color:var(--gold);box-shadow:0 0 0 3px rgba(196,154,90,.25)}
+.ah{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.ah .tm{font-family:'Oswald',sans-serif;font-size:1.6rem;color:var(--wine);line-height:1}
+.ah small{display:block;color:var(--mut);font-size:.8rem}
+.pill{font-size:.66rem;font-weight:800;border-radius:6px;padding:4px 8px;white-space:nowrap;letter-spacing:.04em}
+.s-novo{background:#fbe3d0;color:#9a4b00}.s-confirmado{background:#e3ecd0;color:#4a5a1c}.s-realizado{background:#e8e2f3;color:#4b3a7a}.s-cancelado{background:#eee;color:#777}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:.88rem;border-block:1px dashed var(--line);padding:10px 0}
+.info span{color:var(--mut);display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+.obs{font-size:.86rem;background:#faf5f2;border-radius:10px;padding:8px 10px}
+.acts{display:flex;gap:6px;flex-wrap:wrap}
+.acts .btn{flex:1 1 auto;font-size:.86rem}
+.acts .mini{flex:0 0 auto}
+.empty{background:#fff;border:1px dashed var(--line);border-radius:16px;padding:30px;text-align:center;color:var(--mut)}
+.ex{font-size:.64rem;background:#f1e9e4;color:var(--mut);border-radius:5px;padding:2px 6px;margin-left:6px;vertical-align:middle}
+/* agenda */
+.calw{display:grid;grid-template-columns:1.1fr 1fr;gap:14px;align-items:start}
+@media(max-width:860px){.calw{grid-template-columns:1fr}}
+.cal{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;min-width:0}
+.cal-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.cal-h b{font-family:'Oswald',sans-serif;font-size:1.4rem;color:var(--wine);text-transform:uppercase}
+.cal-h button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:none}
+.dw,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.dw span{text-align:center;font-size:.7rem;color:var(--mut);font-weight:800}
+.days button{aspect-ratio:1;border:1px solid transparent;border-radius:10px;background:#f8f3ef;font-weight:800;position:relative;min-width:0;padding:0;font-size:.92rem}
+.days button.pad{visibility:hidden}
+.days button.past{color:#cfc6c1;background:none}
+.days button.off{background:none;color:#cfc6c1}
+.days button.b{background:#3a2a30;color:#fff}
+.days button.sel{outline:2px solid var(--wine);outline-offset:1px}
+.days button.t{border-color:var(--gold)}
+.days button i{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);font-style:normal;font-size:.6rem;font-weight:800;background:var(--wine);color:#fff;border-radius:99px;padding:0 5px;line-height:1.4}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;font-size:.78rem;color:var(--mut)}
+.dayp{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;min-width:0}
+.dayp h3{font-family:'Oswald',sans-serif;font-size:1.3rem;color:var(--wine);text-transform:uppercase}
+.sl{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.sl:last-of-type{border:0}
+.sl .h{font-family:'Oswald',sans-serif;font-size:1.1rem}
+.sl .fr{color:var(--olive)}.sl .bz{color:var(--mut)}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.seg button{border:1px solid var(--line);background:#faf5f2;border-radius:10px;padding:10px 12px;font-weight:800}
+/* resumo */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
+.kpi small{color:var(--mut);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+.kpi b{display:block;font-size:1.5rem;margin-top:4px;color:var(--wine)}
+@media(max-width:760px){.kpis{grid-template-columns:1fr 1fr}}
+.box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:12px}
+.bars{display:grid;gap:10px;margin-top:10px}
+.bars div{display:grid;grid-template-columns:110px 1fr 30px;gap:10px;align-items:center;font-size:.9rem}
+.bars span.b{height:12px;border-radius:99px;background:var(--wine)}
+.toast{position:fixed;left:50%;top:14px;transform:translate(-50%,-200%);visibility:hidden;z-index:90;background:var(--ink);color:#fff;border-radius:14px;padding:12px 16px;font-weight:800;box-shadow:0 14px 40px -12px rgba(0,0,0,.5);transition:transform .35s cubic-bezier(.2,.7,.1,1),visibility .35s;max-width:calc(100% - 24px)}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+</style>
+</head>
+<body>
+<div class="demo">Painel de demonstração · funciona neste navegador. <a href="./#agendar" target="_blank" rel="noopener">Abra o site</a> em outra aba, marque uma consulta e veja chegar aqui.</div>
+<header>
+ <div class="hd"><div class="brand"><div><b>Lurdiane Brandão</b><small>Painel de consultas</small></div></div><button class="snd" id="snd" type="button" aria-label="Ativar som de consulta nova">🔕</button></div>
+ <nav class="tabs" id="tabs"><button type="button" data-v="cons" class="on">Consultas<b id="nNovo" hidden>0</b></button><button type="button" data-v="agenda">Agenda</button><button type="button" data-v="res">Resumo</button><button type="button" data-v="aj">Ajustes</button></nav>
+</header>
+<main>
+ <section class="view on" id="v-cons">
+  <div class="bar"><div><h2>Consultas</h2><p class="sub" id="pSub"></p></div><button class="btn gh" id="sim" type="button">+ Simular pedido novo</button></div>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="list"></div>
+ </section>
+ <section class="view" id="v-agenda">
+  <div class="bar"><div><h2>Agenda</h2><p class="sub">Toque num dia pra ver os horários, bloquear um horário ou o dia todo.</p></div></div>
+  <div class="calw">
+   <div class="cal"><div class="cal-h"><button type="button" id="pm" aria-label="Mês anterior">←</button><b id="mn"></b><button type="button" id="nm" aria-label="Próximo mês">→</button></div><div class="dw"><span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span></div><div class="days" id="days"></div>
+    <div class="legend"><span>● número = consultas no dia</span><span style="background:#3a2a30;color:#fff;border-radius:4px;padding:0 6px">dia bloqueado</span></div></div>
+   <div class="dayp" id="dayp"><p class="sub">Escolha um dia no calendário.</p></div>
+  </div>
+ </section>
+ <section class="view" id="v-res">
+  <div class="bar"><div><h2>Resumo</h2><p class="sub">Consultas dos próximos 7 dias e do mês.</p></div></div>
+  <div class="kpis" id="kpis"></div>
+  <div class="box"><b>Por tipo de atendimento (mês)</b><div class="bars" id="bars"></div></div>
+  <div class="box"><b>Motivos mais procurados (mês)</b><div class="bars" id="mots"></div></div>
+ </section>
+ <section class="view" id="v-aj">
+  <div class="bar"><div><h2>Ajustes</h2></div></div>
+  <div class="box" style="margin-top:0;max-width:620px"><b>Dados de teste</b><p class="sub">Apaga as consultas e bloqueios desta demonstração neste navegador.</p><div class="seg"><button type="button" id="reset">Recomeçar demonstração</button></div></div>
+  <div class="box" style="max-width:620px"><b>Na versão de verdade</b><p class="sub" style="margin-top:6px">Entra com senha, funciona no celular e no computador ao mesmo tempo, e o pedido do paciente chega pela internet com aviso. Dá pra mudar os horários de atendimento e as cidades atendidas em casa.</p></div>
+ </section>
+</main>
+<div class="toast" id="toast"></div>
+<script src="lb.js?v=1"></script>
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],{K,get,set,esc}=LB;
+let tT;const toast=m=>{const t=$('#toast');t.innerHTML=m;t.classList.add('on');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('on'),3200)};
+const T=LB.today();
+const addDays=n=>{const [y,m,d]=T.split('-').map(Number);return LB.iso(new Date(y,m-1,d+n))};
+const nextOpen=n=>{for(let i=n;i<n+10;i++){const s=addDays(i);if(LB.HOURS[LB.dow(s)])return s}return addDays(n)};
+function seed(){if(localStorage.getItem(K.ap)!==null)return;const n=Date.now(),H=36e5;
+ const d0=nextOpen(0),d1=nextOpen(1),d2=nextOpen(2),d3=nextOpen(3);const sl=s=>LB.slots(s);
+ const pick=(s,i)=>{const a=sl(s);return a[Math.min(i,a.length-1)]||'09:00'};
+ set(K.ap,[
+  {id:n-5,code:'LB213',ex:1,at:n-1*H,date:d1,time:pick(d1,1),mod:'dom',mot:'Idoso / recuperação depois de internação',pra:'Para um familiar',nome:'Paciente exemplo',tel:'27900000000',end:'Jacaraípe, Serra',obs:'Minha mãe teve alta semana passada.',status:'novo'},
+  {id:n-4,code:'LB212',ex:1,at:n-20*H,date:d0,time:pick(d0,2),mod:'online',mot:'Emagrecimento',pra:'Para mim',nome:'Paciente exemplo',tel:'11900000000',end:'',obs:'',status:'confirmado'},
+  {id:n-3,code:'LB211',ex:1,at:n-30*H,date:d2,time:pick(d2,5),mod:'dom',mot:'Nutrição por sonda (enteral)',pra:'Para um familiar',nome:'Paciente exemplo',tel:'27900000000',end:'Laranjeiras, Serra',obs:'',status:'confirmado'},
+  {id:n-2,code:'LB210',ex:1,at:n-50*H,date:d3,time:pick(d3,3),mod:'pres',mot:'Acompanhamento de doença (diabetes, pressão, rins…)',pra:'Para mim',nome:'Paciente exemplo',tel:'27900000000',end:'',obs:'Levo os exames.',status:'confirmado'},
+  {id:n-1,code:'LB209',ex:1,at:n-90*H,date:addDays(-2),time:'09:00',mod:'dom',mot:'Idoso / recuperação depois de internação',pra:'Para um familiar',nome:'Paciente exemplo',tel:'27900000000',end:'Vila Velha',obs:'',status:'realizado'}
+ ])}
+seed();
+
+let AC=null,sound=false;
+function beep(){if(!sound||!AC)return;const t=AC.currentTime;[0,.2].forEach((d,i)=>{const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=[880,1175][i];g.gain.setValueAtTime(.0001,t+d);g.gain.exponentialRampToValueAtTime(.3,t+d+.02);g.gain.exponentialRampToValueAtTime(.0001,t+d+.35);o.connect(g).connect(AC.destination);o.start(t+d);o.stop(t+d+.4)})}
+$('#snd').onclick=()=>{try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();AC.resume()}catch(e){}sound=!sound;$('#snd').classList.toggle('on',sound);$('#snd').textContent=sound?'🔔':'🔕';if(sound){beep();toast('🔔 Som de consulta nova ligado')}};
+$$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.classList.toggle('on',x===b));$$('.view').forEach(v=>v.classList.toggle('on',v.id==='v-'+b.dataset.v));scrollTo(0,0);render(true)});
+
+const aps=()=>get(K.ap,[]).sort((a,b)=>(a.date+a.time)<(b.date+b.time)?-1:1);
+const LBL={novo:'NOVA',confirmado:'CONFIRMADA',realizado:'REALIZADA',cancelado:'CANCELADA'};
+const ago=t=>{const m=Math.round((Date.now()-t)/60000);return m<1?'agora':m<60?m+' min atrás':m<1440?Math.floor(m/60)+'h atrás':Math.floor(m/1440)+' dias atrás'};
+let filter='hoje';
+const FIL=[['hoje','Hoje',a=>a.date===T&&a.status!=='cancelado'],['novo','Novas',a=>a.status==='novo'],['prox','Próximas',a=>a.date>=T&&a.status==='confirmado'],['realizado','Realizadas',a=>a.status==='realizado'],['cancelado','Canceladas',a=>a.status==='cancelado']];
+function upd(id,p,msg){const all=get(K.ap,[]),a=all.find(x=>x.id===id);if(!a)return;Object.assign(a,p);set(K.ap,all);render(true);msg&&toast(msg)}
+const first=n=>n.split(' ')[0];
+function wa(a,kind){const onde=a.mod==='dom'?`no seu endereço (${a.end})`:a.mod==='online'?'por chamada de vídeo (o link vai aqui no WhatsApp)':'no consultório';
+ const t=kind==='lem'?`Olá ${first(a.nome)}! Passando pra lembrar da sua consulta de nutrição ${LB.fmt(a.date).toLowerCase()} às ${a.time}, ${onde}. Qualquer coisa é só me chamar. Dra. Lurdiane Brandão`:`Olá ${first(a.nome)}! Aqui é a Dra. Lurdiane Brandão. Sua consulta está confirmada: ${LB.fmt(a.date).toLowerCase()} às ${a.time}, ${onde}. Até lá!`;
+ return 'https://wa.me/55'+a.tel.replace(/^55/,'')+'?text='+encodeURIComponent(t)}
+function card(a){let act='';
+ if(a.status==='novo')act=`<div class="acts"><button class="btn ol" type="button" data-conf>Confirmar</button><a class="btn gh mini" href="${wa(a,'conf')}" target="_blank" rel="noopener">WhatsApp</a><button class="btn rd mini" type="button" data-canc>Recusar</button></div>`;
+ else if(a.status==='confirmado')act=`<div class="acts"><button class="btn" type="button" data-done>Consulta realizada</button><a class="btn gh mini" href="${wa(a,'lem')}" target="_blank" rel="noopener">Lembrete</a><button class="btn rd mini" type="button" data-canc>Cancelar</button></div>`;
+ return `<article class="ac${a.status==='novo'?' new':''}" data-id="${a.id}"><div class="ah"><div><span class="tm">${a.time}</span>${a.ex?'<span class="ex">exemplo</span>':''}<small>${LB.fmt(a.date)} · ${a.code} · pedido ${ago(a.at)}</small></div><span class="pill s-${a.status}">${LBL[a.status]}</span></div>
+ <div class="info"><div><span>Atendimento</span>${LB.MOD[a.mod]}</div><div><span>${a.mod==='dom'?'Bairro':'Paciente'}</span>${esc(a.mod==='dom'?a.end:a.pra)}</div><div style="grid-column:1/3"><span>Motivo</span>${esc(a.mot)}</div><div><span>Nome</span>${esc(a.nome)}</div><div><span>Para</span>${esc(a.pra)}</div></div>
+ ${a.obs?`<div class="obs">💬 ${esc(a.obs)}</div>`:''}${act}</article>`}
+function renderList(){const all=aps();$('#filters').innerHTML=FIL.map(([k,n,fn])=>`<button type="button" data-f="${k}" class="${k===filter?'on':''}">${n}<small>${all.filter(fn).length}</small></button>`).join('');
+ $$('#filters button').forEach(b=>b.onclick=()=>{filter=b.dataset.f;renderList()});
+ const l=all.filter(FIL.find(f=>f[0]===filter)[2]);if(filter==='realizado'||filter==='cancelado')l.reverse();
+ $('#list').innerHTML=l.length?l.map(card).join(''):`<div class="empty">${filter==='hoje'?'Nenhuma consulta hoje.':'Nada aqui.'} Marque uma pelo <a href="./#agendar" target="_blank" rel="noopener" style="color:var(--wine);font-weight:800">site</a> ou toque em “Simular pedido novo”.</div>`;
+ const nv=all.filter(a=>a.status==='novo').length,hj=all.filter(FIL[0][2]).length;$('#nNovo').hidden=!nv;$('#nNovo').textContent=nv;
+ $('#pSub').textContent=(hj?hj+(hj>1?' consultas hoje':' consulta hoje'):'Nenhuma consulta hoje')+(nv?' · '+nv+(nv>1?' pedidos novos pra confirmar':' pedido novo pra confirmar'):'');document.title=(nv?'('+nv+') ':'')+'Painel · Dra. Lurdiane Brandão'}
+$('#list').addEventListener('click',e=>{const c=e.target.closest('.ac');if(!c)return;const id=+c.dataset.id,a=get(K.ap,[]).find(x=>x.id===id);
+ if(e.target.closest('[data-conf]'))upd(id,{status:'confirmado'},'✅ Consulta confirmada. O paciente já vê no site.');
+ if(e.target.closest('[data-done]'))upd(id,{status:'realizado'},'Consulta marcada como realizada');
+ if(e.target.closest('[data-canc]'))upd(id,{status:'cancelado'},a.code+' cancelada. O horário voltou a ficar livre no site.')});
+$('#sim').onclick=()=>{const all=get(K.ap,[]);let s,t,tries=0;do{s=addDays(1+Math.floor(Math.random()*10));const fr=LB.freeSlots(s);t=fr[Math.floor(Math.random()*fr.length)];tries++}while(!t&&tries<30);if(!t)return;
+ const mods=['dom','online','pres','dom'],mots=['Emagrecimento','Idoso / recuperação depois de internação','Nutrição por sonda (enteral)','Acompanhamento de doença (diabetes, pressão, rins…)'],m=mods[Math.floor(Math.random()*4)];
+ all.unshift({id:Date.now(),code:'LB'+String(214+all.filter(x=>!x.ex).length),at:Date.now(),date:s,time:t,mod:m,mot:mots[Math.floor(Math.random()*4)],pra:Math.random()>.5?'Para mim':'Para um familiar',nome:'Paciente teste',tel:'27900000000',end:m==='dom'?'Serra Sede, Serra':'',obs:'',status:'novo'});set(K.ap,all);check()};
+
+/* agenda */
+const [ty,tm]=T.split('-').map(Number);let vy=ty,vm=tm-1,sd=T;
+const dayAps=s=>get(K.ap,[]).filter(a=>a.date===s&&LB.ACTIVE.concat('realizado').includes(a.status)).sort((a,b)=>a.time<b.time?-1:1);
+function drawCal(){const f1=new Date(vy,vm,1),n=new Date(vy,vm+1,0).getDate();$('#mn').textContent=LB.month(vy,vm);
+ let h='';for(let i=0;i<f1.getDay();i++)h+='<button class="pad" type="button" tabindex="-1"></button>';
+ for(let d=1;d<=n;d++){const s=vy+'-'+LB.pad(vm+1)+'-'+LB.pad(d),c=dayAps(s).length,bl=get(K.block,[]).includes(s),open=!!LB.HOURS[LB.dow(s)];
+  h+=`<button type="button" data-d="${s}" class="${s<T?'past':bl?'b':!open?'off':''}${s===T?' t':''}${s===sd?' sel':''}">${d}${c?`<i>${c}</i>`:''}</button>`}
+ $('#days').innerHTML=h}
+function drawDay(){if(!sd)return;const ap=dayAps(sd),bl=get(K.block,[]).includes(sd),sl=LB.slots(sd);
+ let rows='';if(!sl.length)rows='<p class="sub" style="margin-top:6px">Sem atendimento nesse dia (domingo).</p>';
+ else rows=sl.map(t=>{const a=ap.find(x=>x.time===t);if(a)return `<div class="sl"><span class="h">${t}</span><span>${LB.MOD[a.mod]}${a.end?' · '+esc(a.end):''}<br><small class="sub">${esc(a.mot)}</small></span><span class="pill s-${a.status}">${LBL[a.status]}</span></div>`;
+  return `<div class="sl"><span class="h">${t}</span><span class="${bl?'bz':LB.demoBusy(sd,t)?'bz':'fr'}">${bl?'Bloqueado':LB.demoBusy(sd,t)?'Ocupado (exemplo)':'Livre no site'}</span><span></span></div>`}).join('');
+ $('#dayp').innerHTML=`<h3>${LB.fmt(sd)}</h3>${rows}${sd<T||!sl.length?'':`<div class="seg"><button type="button" id="blk">${bl?'Liberar o dia no site':'Bloquear o dia todo'}</button></div>`}`;
+ const b=$('#blk');b&&(b.onclick=()=>{let x=get(K.block,[]);x=bl?x.filter(v=>v!==sd):[...x,sd];set(K.block,x);toast(bl?'Dia liberado no site':'Dia bloqueado. Os horários somem do site.');render(true)})}
+$('#pm').onclick=()=>{vm--;if(vm<0){vm=11;vy--}drawCal()};$('#nm').onclick=()=>{vm++;if(vm>11){vm=0;vy++}drawCal()};
+$('#days').addEventListener('click',e=>{const b=e.target.closest('[data-d]');if(!b)return;sd=b.dataset.d;drawCal();drawDay()});
+
+/* resumo */
+function renderRes(){const all=get(K.ap,[]),wk=addDays(7),mo=T.slice(0,7);
+ const prox=all.filter(a=>a.date>=T&&a.date<=wk&&a.status==='confirmado').length,nov=all.filter(a=>a.status==='novo').length,
+  feitas=all.filter(a=>a.status==='realizado'&&a.date.slice(0,7)===mo).length,dom=all.filter(a=>a.date>=T&&a.date<=wk&&a.mod==='dom'&&LB.ACTIVE.includes(a.status)).length;
+ $('#kpis').innerHTML=[['Confirmadas · 7 dias',prox],['Pra confirmar',nov],['Realizadas no mês',feitas],['Visitas em casa · 7 dias',dom]].map(k=>`<div class="kpi"><small>${k[0]}</small><b>${k[1]}</b></div>`).join('');
+ const mon=all.filter(a=>a.date.slice(0,7)===mo&&a.status!=='cancelado');
+ const bar=(arr,keyFn,lbl)=>{const c={};arr.forEach(a=>{const k=keyFn(a);c[k]=(c[k]||0)+1});const mx=Math.max(1,...Object.values(c));return Object.entries(c).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<div><span>${lbl(k)}</span><span class="b" style="width:${Math.max(8,v/mx*100)}%"></span><b>${v}</b></div>`).join('')||'<p class="sub">Sem consultas no mês ainda.</p>'};
+ $('#bars').innerHTML=bar(mon,a=>a.mod,k=>LB.MOD[k]);
+ $('#mots').innerHTML=bar(mon,a=>a.mot.split(' (')[0].split(' /')[0],k=>esc(k))}
+
+$('#reset').onclick=()=>{[K.ap,K.block,K.mine].forEach(k=>{try{localStorage.removeItem(k)}catch(e){}});seed();known=new Set(get(K.ap,[]).map(a=>a.id));render(true);toast('Demonstração recomeçada')};
+
+let known=new Set(get(K.ap,[]).map(a=>a.id)),sig='';
+function check(){const all=get(K.ap,[]),nw=all.filter(a=>!known.has(a.id));nw.forEach(a=>known.add(a.id));if(nw.length){beep();const a=nw[0];toast(`🔔 Consulta nova: ${LB.MOD[a.mod]} · ${LB.short(a.date)} às ${a.time}`);filter='novo';if(!$('#v-cons').classList.contains('on'))$('#tabs button').click()}render()}
+function render(force){const now=(localStorage.getItem(K.ap)||'')+(localStorage.getItem(K.block)||'');if(!force&&now===sig)return;sig=now;
+ renderList();drawCal();drawDay();renderRes()}
+LB.on(check);setInterval(check,3000);render(true);
+})();
+</script>
+</body>
+</html>

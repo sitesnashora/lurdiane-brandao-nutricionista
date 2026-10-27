@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dra. Lurdiane Brandão · Nutricionista Clínica · Serra – ES</title>
+<meta name="description" content="Dra. Lurdiane Brandão — nutricionista clínica, atendimento domiciliar na Grande Vitória e online para todo o Brasil. Adultos e idosos. Agende sua consulta pelo site.">
+<meta name="theme-color" content="#7a2340">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Allura&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6f0;--paper:#fffdfa;--ink:#2b1d22;--mut:#76666b;--line:rgba(43,29,34,.12);--wine:#7a2340;--wine2:#5e1830;--olive:#6b7a3a;--gold:#c49a5a;--soft:#f4e8e3;
+--fh:'Oswald',Impact,sans-serif;--fs:'Allura',cursive;--fb:'Nunito',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.1,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:500 16px/1.6 var(--fb);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}
+[hidden]{display:none!important}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--fh);font-weight:700;line-height:1.02;color:var(--wine);text-transform:uppercase;letter-spacing:.01em}
+h2{font-size:clamp(2.2rem,5.6vw,3.4rem)}
+.scr{font-family:var(--fs);font-weight:400;text-transform:none;color:var(--olive);letter-spacing:0}
+.kick{font-size:.74rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--olive)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:999px;background:var(--wine);color:#fff;font-weight:800;border:0;transition:transform .15s,background .2s}
+.btn:hover{background:var(--wine2)}.btn:active{transform:scale(.97)}
+.btn.ln{background:transparent;color:var(--wine);border:1.5px solid var(--wine)}
+.btn.ol{background:var(--olive)}
+.demo-bar{background:var(--wine2);color:#f3dfe4;font-size:.72rem;text-align:center;padding:5px 12px}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.rv.in{opacity:1;transform:none}
+header{position:sticky;top:0;z-index:50;background:rgba(251,246,240,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:10px}
+.logo{display:flex;align-items:center;gap:10px;min-width:0}
+.icons{display:flex;gap:3px}
+.icons i{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:.62rem;color:#fff}
+.icons i:nth-child(1){background:var(--wine)}.icons i:nth-child(2){background:var(--olive)}.icons i:nth-child(3){background:var(--gold)}
+.logo b{display:block;font-family:var(--fs);font-weight:400;font-size:1.9rem;line-height:.9;color:var(--wine);white-space:nowrap}
+.logo small{display:block;font-size:.58rem;font-weight:800;letter-spacing:.2em;color:var(--olive);text-transform:uppercase;white-space:nowrap}
+.myres{display:none;border:1.5px solid var(--wine);color:var(--wine);background:none;border-radius:999px;padding:9px 14px;font-weight:800;font-size:.84rem;white-space:nowrap}
+.myres.on{display:inline-flex}
+.nav .btn{padding:10px 16px;font-size:.9rem}
+@media(max-width:560px){.nav .btn.top{display:none}.icons{display:none}.logo b{font-size:1.65rem}}
+/* hero */
+.hero{padding:clamp(28px,6vw,64px) 0 clamp(40px,7vw,80px);background:radial-gradient(60% 60% at 90% 10%,#f1dfd9,transparent 70%)}
+.hgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+@media(max-width:860px){.hgrid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.9rem,8.4vw,5.4rem);margin:10px 0 2px}
+.hero .scr{font-size:clamp(2.4rem,7vw,3.6rem);line-height:1;display:block;margin-bottom:14px}
+.hero p{max-width:46ch;color:var(--mut);font-size:1.06rem;margin-bottom:22px}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.84rem;font-weight:700}
+.chips span b{color:var(--wine)}
+.photo{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:#e9ddd5;box-shadow:0 30px 60px -34px rgba(122,35,64,.55)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo .tag{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(255,253,250,.94);border-radius:16px;padding:12px 14px;display:flex;gap:10px;align-items:center;font-size:.88rem}
+.photo .tag i{font-style:normal;font-size:1.4rem}
+.photo .tag b{display:block;color:var(--wine)}
+@media(max-width:860px){.photo{aspect-ratio:4/3}}
+/* modalidades */
+.sec{padding:clamp(60px,9vw,100px) 0}
+.mods{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+@media(max-width:860px){.mods{grid-template-columns:1fr}}
+.mod{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.mod .ic{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:1.5rem;background:var(--soft)}
+.mod h3{font-size:1.6rem}
+.mod p{color:var(--mut);font-size:.95rem}
+.mod .where{font-weight:800;color:var(--olive);font-size:.84rem;letter-spacing:.04em}
+/* cuidado */
+.care{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center}
+@media(max-width:860px){.care{grid-template-columns:1fr}}
+.care .pic{border-radius:24px;overflow:hidden;aspect-ratio:1;background:#e9ddd5}
+.care .pic img{width:100%;height:100%;object-fit:cover}
+.list{list-style:none;display:grid;gap:10px;margin-top:20px}
+.list li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.list li i{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;font-style:normal;background:var(--wine);color:#fff;font-size:.95rem}
+.list li:nth-child(even) i{background:var(--olive)}
+.list b{display:block}.list small{color:var(--mut);font-size:.88rem}
+/* sobre */
+.about{background:var(--wine);color:#fff}
+.about h2,.about .kick{color:#fff}.about .scr{color:#f3d9a8}
+.ab{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+@media(max-width:860px){.ab{grid-template-columns:1fr 1fr}}
+.ab div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:16px}
+.ab b{font-family:var(--fh);font-size:1.9rem;display:block;line-height:1}
+.ab span{font-size:.9rem;color:#f0dbe1}
+.about p.q{max-width:60ch;margin-top:20px;color:#f6e7eb;font-size:1.04rem}
+/* agendar */
+.book{background:var(--paper);border-block:1px solid var(--line)}
+.bk{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px;align-items:start}
+@media(max-width:900px){.bk{grid-template-columns:minmax(0,1fr)}}
+.bk>*{min-width:0}.dates{max-width:100%}
+.box{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;min-width:0}
+.step{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);margin:2px 0 10px}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg label{display:block;position:relative}
+.seg input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.seg span{display:block;padding:10px 14px;border-radius:14px;border:1.5px solid var(--line);font-weight:700;font-size:.92rem;cursor:pointer;background:#fbf8f5}
+.seg input:checked+span{background:var(--wine);color:#fff;border-color:var(--wine)}
+.modnote{font-size:.84rem;color:var(--mut);margin-top:8px;min-height:1.3em}
+.dates{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:thin;scroll-snap-type:x proximity}
+.dates button{flex:0 0 64px;scroll-snap-align:start;border:1.5px solid var(--line);background:#fbf8f5;border-radius:14px;padding:8px 4px;text-align:center;line-height:1.15}
+.dates button small{display:block;font-size:.7rem;font-weight:800;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.dates button b{display:block;font-family:var(--fh);font-size:1.5rem;color:var(--ink)}
+.dates button em{display:block;font-style:normal;font-size:.66rem;color:var(--olive);font-weight:800}
+.dates button.sel{background:var(--wine);border-color:var(--wine)}.dates button.sel *{color:#fff!important}
+.dates button:disabled{opacity:.4;cursor:default}
+.dates button:disabled em{color:var(--mut)}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin-top:4px}
+.times button{border:1.5px solid var(--line);background:#fbf8f5;border-radius:12px;padding:10px 0;font-weight:800}
+.times button.sel{background:var(--olive);color:#fff;border-color:var(--olive)}
+.times .none{grid-column:1/-1;color:var(--mut);font-size:.9rem}
+.f{display:grid;gap:12px}
+.f label{display:grid;gap:5px;font-size:.84rem;font-weight:800}
+.f input,.f select,.f textarea{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px;background:#fbf8f5;outline:none;font-weight:600}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--wine)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:480px){.row2{grid-template-columns:1fr}}
+.sum{background:var(--soft);border-radius:14px;padding:12px 14px;font-weight:700;color:var(--wine2);font-size:.95rem}
+.sum.empty{background:#f5f1ee;color:var(--mut);font-weight:600}
+.err{color:#b3261e;font-size:.86rem;font-weight:800;min-height:1.2em}
+.note{font-size:.78rem;color:var(--mut);font-weight:500}
+/* acompanhamento */
+.steps{list-style:none;display:grid;gap:8px;margin:14px 0}
+.steps li{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:14px;border:1px solid var(--line);background:#fbf8f5;opacity:.45}
+.steps li.on{opacity:1}
+.steps li.cur{border-color:var(--wine);box-shadow:0 0 0 3px rgba(122,35,64,.12);background:#fff}
+.steps li i{flex:0 0 28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#ccc;color:#fff;font-style:normal;font-weight:800;font-size:.85rem}
+.steps li.on i{background:var(--olive)}
+.steps b{display:block}.steps small{color:var(--mut)}
+.code{display:inline-block;padding:4px 12px;border-radius:8px;background:var(--wine);color:#fff;font-weight:800;letter-spacing:.08em}
+.hint{margin-top:12px;padding:12px 14px;border-radius:14px;border:1px dashed var(--wine);font-size:.88rem}
+.hint a{color:var(--wine);font-weight:800;text-decoration:underline}
+/* painel teaser */
+.pt{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+@media(max-width:860px){.pt{grid-template-columns:1fr}}
+.pt ul{list-style:none;margin-top:18px;display:grid;gap:12px}
+.pt li{display:flex;gap:12px}.pt li span{font-size:1.3rem}
+.pt li b{display:block}.pt li p{color:var(--mut);font-size:.92rem}
+.mock{background:#fff;border:1px solid var(--line);border-radius:22px;padding:14px;box-shadow:0 30px 60px -36px rgba(122,35,64,.45);min-width:0}
+.mock .mh{display:flex;justify-content:space-between;font-weight:800;margin-bottom:8px}
+.mock .oc{display:grid;grid-template-columns:auto 1fr auto;gap:2px 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;margin-top:8px;font-size:.88rem;align-items:center}
+.mock .oc .h{grid-row:1/3;font-family:var(--fh);font-size:1.3rem;color:var(--wine)}
+.mock .oc small{color:var(--mut)}
+.mock em{grid-row:1/3;grid-column:3;font-style:normal;font-size:.66rem;font-weight:800;border-radius:6px;padding:4px 8px;letter-spacing:.04em}
+.s-novo{background:#fbe3d0;color:#9a4b00}.s-confirmado{background:#e3ecd0;color:#4a5a1c}.s-realizado{background:#e8e2f3;color:#4b3a7a}.s-cancelado{background:#eee;color:#777}
+/* depoimentos */
+.revs{display:grid;grid-template-columns:auto 1fr 1fr;gap:20px;align-items:stretch;margin-top:26px}
+@media(max-width:860px){.revs{grid-template-columns:1fr}}
+.score{background:var(--olive);color:#fff;border-radius:22px;padding:22px;display:flex;flex-direction:column;justify-content:center;min-width:180px}
+.score b{font-family:var(--fh);font-size:4.4rem;line-height:.9}
+.score span{color:#f3d9a8;letter-spacing:.1em}
+.rq{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px}
+.rq p{font-size:1.02rem}
+.rq cite{display:block;margin-top:10px;font-style:normal;font-weight:800;color:var(--wine);font-size:.88rem}
+/* contato */
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.ct{grid-template-columns:1fr}}
+.ct .card{background:var(--ink);color:#fff;border-radius:22px;padding:24px}
+.ct .card h3{color:#fff;font-size:1.9rem}
+.ct .card p{color:#d9cbd0;margin-top:6px}
+.hrs{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}
+.hrs div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line);font-weight:700}
+.hrs div:last-child{border:0}.hrs span{color:var(--mut)}
+footer{padding:34px 0 50px;color:var(--mut);font-size:.86rem;border-top:1px solid var(--line)}
+footer b{color:var(--wine);font-family:var(--fs);font-weight:400;font-size:2rem}
+.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,160%);visibility:hidden;z-index:90;background:var(--wine2);color:#fff;border-radius:14px;padding:12px 16px;font-weight:800;transition:transform .35s var(--ease),visibility .35s;max-width:calc(100% - 24px)}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+</style>
+</head>
+<body>
+<div class="demo-bar">Site de demonstração · nenhuma consulta é marcada de verdade</div>
+<header><div class="wrap nav">
+ <a href="#topo" class="logo" aria-label="Dra. Lurdiane Brandão"><span class="icons"><i>♥</i><i>❦</i><i>✚</i></span><span><b>Lurdiane Brandão</b><small>Nutricionista clínica</small></span></a>
+ <div style="display:flex;gap:8px;align-items:center"><button class="myres" id="myres" type="button">Minha consulta</button><a class="btn top" href="#agendar">Agendar</a></div>
+</div></header>
+
+<main id="topo">
+<section class="hero">
+ <div class="wrap hgrid">
+  <div class="rv">
+   <span class="kick">Home care e telenutrição · Serra – ES</span>
+   <h1>Nutrição clínica</h1>
+   <span class="scr">com humanização e ciência</span>
+   <p>Atendimento especializado para adultos e idosos: em casa, na Grande Vitória, ou online para todo o Brasil. Escolha o dia e o horário aqui e receba a confirmação no WhatsApp.</p>
+   <div class="ctas"><a class="btn" href="#agendar">Agendar consulta</a><a class="btn ln" href="#atendimento">Como funciona</a></div>
+   <div class="chips"><span><b>★ 4,9</b> · 38 avaliações</span><span>CRN-4 15100839</span><span>9 anos de nutrição clínica</span></div>
+  </div>
+  <div class="photo rv"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&h=1100&q=72" alt="Prato saudável e colorido"><div class="tag"><i>🏠</i><div><b>Atendimento domiciliar</b>Vou até você na Grande Vitória</div></div></div>
+ </div>
+</section>
+
+<section class="sec" id="atendimento" style="padding-top:20px">
+ <div class="wrap">
+  <span class="kick">Atendimento</span>
+  <h2>Do jeito que <span class="scr" style="font-size:1.2em">for melhor pra você</span></h2>
+  <div class="mods">
+   <div class="mod rv"><span class="ic">🏠</span><h3>Domiciliar</h3><p>Consulta na sua casa, sem precisar se deslocar. Ideal pra idosos, pós-internação e quem tem rotina corrida.</p><span class="where">Grande Vitória</span></div>
+   <div class="mod rv"><span class="ic">🩺</span><h3>Presencial</h3><p>Consulta no consultório, com avaliação completa: bioimpedância e avaliação física 3D.</p><span class="where">Serra – ES</span></div>
+   <div class="mod rv"><span class="ic">💻</span><h3>Online</h3><p>Telenutrição por vídeo, com plano alimentar e acompanhamento pelo WhatsApp.</p><span class="where">Todo o Brasil</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+ <div class="wrap care">
+  <div class="pic rv"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&h=900&q=72" alt="Alimentos frescos e saudáveis" loading="lazy"></div>
+  <div class="rv">
+   <span class="kick">Como eu cuido</span>
+   <h2>Cuidado que vai além <span class="scr" style="font-size:1.2em">da alimentação</span></h2>
+   <ul class="list">
+    <li><i>♥</i><div><b>Prevenção e tratamento de doenças clínicas</b><small>Plano alimentar pensado pra sua condição de saúde.</small></div></li>
+    <li><i>✚</i><div><b>Recuperação nutricional</b><small>Suporte em condições clínicas e depois de internações.</small></div></li>
+    <li><i>❦</i><div><b>Nutrição enteral e parenteral</b><small>Acompanhamento de quem se alimenta por sonda, em casa.</small></div></li>
+    <li><i>✓</i><div><b>Emagrecimento individualizado</b><small>Respeitando sua rotina e sua relação com a comida.</small></div></li>
+    <li><i>☺</i><div><b>Acompanhamento humanizado e contínuo</b><small>Retornos e dúvidas pelo WhatsApp.</small></div></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="sec about">
+ <div class="wrap">
+  <span class="kick">Sobre mim</span>
+  <h2>Dra. Lurdiane Brandão <span class="scr" style="font-size:1.1em;display:block">nutricionista clínica</span></h2>
+  <div class="ab rv">
+   <div><b>9 anos</b><span>de nutrição clínica</span></div>
+   <div><b>Pós</b><span>em Nutrição Clínica Hospitalar</span></div>
+   <div><b>Pós</b><span>em Terapia Nutricional Enteral e Parenteral</span></div>
+   <div><b>Adulto</b><span>e idoso, de baixa a alta complexidade</span></div>
+  </div>
+  <p class="q rv">“Meu trabalho une ciência, experiência clínica e humanização, oferecendo um cuidado nutricional individualizado, que respeita as necessidades, a rotina e a realidade de cada paciente.”</p>
+ </div>
+</section>
+
+<section class="sec book" id="agendar">
+ <div class="wrap">
+  <span class="kick">Agendamento</span>
+  <h2>Marque sua consulta <span class="scr" style="font-size:1.2em">em 1 minuto</span></h2>
+  <p style="color:var(--mut);margin-top:8px;max-width:58ch">Escolha como quer ser atendido, o dia e o horário livre. Só precisa do seu nome e WhatsApp, sem cadastro.</p>
+  <div class="bk">
+   <div class="box rv">
+    <p class="step">1 · Como prefere ser atendido?</p>
+    <div class="seg" id="mods"><label><input type="radio" name="mod" value="dom" checked><span>🏠 Em casa</span></label><label><input type="radio" name="mod" value="pres"><span>🩺 Consultório</span></label><label><input type="radio" name="mod" value="online"><span>💻 Online</span></label></div>
+    <p class="modnote" id="modnote"></p>
+    <p class="step" style="margin-top:16px">2 · Escolha o dia</p>
+    <div class="dates" id="dates"></div>
+    <p class="step" style="margin-top:12px">3 · Escolha o horário</p>
+    <div class="times" id="times"><p class="none">Escolha um dia primeiro.</p></div>
+   </div>
+   <div class="box rv" id="formBox">
+    <form class="f" id="f" novalidate>
+     <p class="step">4 · Seus dados</p>
+     <div class="sum empty" id="sum">Escolha o dia e o horário ao lado.</div>
+     <label>Motivo da consulta<select name="mot"><option>Emagrecimento</option><option>Acompanhamento de doença (diabetes, pressão, rins…)</option><option>Nutrição por sonda (enteral)</option><option>Idoso / recuperação depois de internação</option><option>Outro</option></select></label>
+     <div><label style="margin-bottom:6px">A consulta é pra quem?</label><div class="seg"><label><input type="radio" name="pra" value="Para mim" checked><span>Pra mim</span></label><label><input type="radio" name="pra" value="Para um familiar"><span>Pra um familiar</span></label></div></div>
+     <div class="row2"><label>Seu nome<input name="nome" autocomplete="name" placeholder="Como te chamo?"></label><label>WhatsApp<input name="tel" inputmode="tel" autocomplete="tel" placeholder="(27) 9 0000-0000"></label></div>
+     <label id="endL">Bairro e cidade <span class="note">(pra consulta em casa)</span><input name="end" placeholder="Ex.: Laranjeiras, Serra"></label>
+     <label>Quer contar alguma coisa? <span class="note">(opcional)</span><textarea name="obs" rows="2" maxlength="200" placeholder="Ex.: exames recentes, horário melhor pra contato…"></textarea></label>
+     <p class="err" id="err"></p>
+     <button class="btn" type="submit">Solicitar consulta</button>
+     <p class="note">Demonstração: a solicitação fica só neste navegador. O valor da consulta é informado pela nutricionista na confirmação.</p>
+    </form>
+    <div id="status" hidden></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec">
+ <div class="wrap pt">
+  <div class="rv">
+   <span class="kick">Pra nutricionista</span>
+   <h2>A agenda toda <span class="scr" style="font-size:1.2em">num painel só</span></h2>
+   <p style="color:var(--mut);margin-top:10px;max-width:46ch">Cada pedido chega no painel com dia, horário, tipo de atendimento, motivo e bairro. Você confirma com um toque e o paciente vê na hora.</p>
+   <ul>
+    <li><span>📅</span><div><b>Agenda do dia e da semana</b><p>Quem você atende hoje, em casa, no consultório ou online, na ordem.</p></div></li>
+    <li><span>💬</span><div><b>Confirmação e lembrete no WhatsApp</b><p>Mensagem pronta com dia, horário e endereço. Um toque e já foi.</p></div></li>
+    <li><span>🚫</span><div><b>Bloqueie dias</b><p>Plantão, viagem ou folga: os horários do dia somem do site na hora.</p></div></li>
+   </ul>
+   <a class="btn" href="painel.html" target="_blank" rel="noopener" style="margin-top:22px">Abrir o painel (demonstração)</a>
+  </div>
+  <div class="mock rv" aria-hidden="true">
+   <div class="mh"><span>Consultas de hoje</span><span style="color:var(--mut);font-weight:600">4 pacientes</span></div>
+   <div class="oc"><span class="h">09:00</span><b>🏠 Domiciliar · Jacaraípe</b><small>Recuperação depois de internação</small><em class="s-realizado">REALIZADA</em></div>
+   <div class="oc"><span class="h">11:00</span><b>💻 Online · São Paulo</b><small>Emagrecimento</small><em class="s-confirmado">CONFIRMADA</em></div>
+   <div class="oc"><span class="h">14:00</span><b>🏠 Domiciliar · Laranjeiras</b><small>Nutrição por sonda</small><em class="s-confirmado">CONFIRMADA</em></div>
+   <div class="oc"><span class="h">16:00</span><b>🩺 Consultório</b><small>Acompanhamento de doença</small><em class="s-novo">NOVA</em></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+ <div class="wrap">
+  <span class="kick">Depoimentos</span>
+  <h2>Quem foi atendido <span class="scr" style="font-size:1.2em">recomenda</span></h2>
+  <div class="revs rv">
+   <div class="score"><b>4,9</b><span>★★★★★</span><small style="margin-top:6px">38 avaliações no Google</small></div>
+   <div class="rq"><p>“Minha consulta foi impecável, profissional ética, humana, extremamente competente e inteligente. Você sente confiança e bem cuidada no que ela fala.”</p><cite>Daniele Athaydes · Google</cite></div>
+   <div class="rq"><p>“Profissional muito atenciosa e descontraída, além de ter um excelente atendimento e focada no objetivo do paciente.”</p><cite>Luan Aires · Google</cite></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" style="padding-top:0" id="contato">
+ <div class="wrap ct">
+  <div class="card rv"><span class="kick" style="color:#f3d9a8">Contato</span><h3 style="margin-top:8px">Serra – ES</h3><p>Atendimento domiciliar na Grande Vitória e online para todo o Brasil.</p><p>(27) 99700-5856 · @lubrandao.nutricionista</p><div class="ctas" style="margin-top:18px"><a class="btn" style="background:#fff;color:var(--wine)" href="https://wa.me/5527997005856" target="_blank" rel="noopener">WhatsApp</a><a class="btn ln" style="color:#fff;border-color:rgba(255,255,255,.5)" href="https://www.instagram.com/lubrandao.nutricionista/" target="_blank" rel="noopener">Instagram</a></div></div>
+  <div class="hrs rv"><span class="kick">Horário de atendimento</span><div style="margin-top:8px"><b>Segunda a quarta</b><span>9h às 17h</span></div><div><b>Quinta e sexta</b><span>8h às 18h</span></div><div><b>Sábado</b><span>9h às 12h</span></div><div><b>Domingo</b><span>Fechado</span></div></div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap"><b>Lurdiane Brandão</b><p>Nutricionista clínica · CRN-4 15100839 · Serra – ES · (27) 99700-5856</p><p style="margin-top:6px">Site de demonstração. Fotos ilustrativas.</p></div></footer>
+<div class="toast" id="toast"></div>
+
+<script src="lb.js?v=1"></script>
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],{K,get,set,esc}=LB;
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('on'),2600)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -6% 0px'});$$('.rv').forEach(el=>io.observe(el));
+
+const T=LB.today();
+const addDays=n=>{const [y,m,d]=T.split('-').map(Number);return LB.iso(new Date(y,m-1,d+n))};
+let sel=null,selT=null;
+const mod=()=>$('#mods input:checked').value;
+const NOTE={dom:'Vou até a sua casa, na Grande Vitória (Serra, Vitória, Vila Velha, Cariacica…).',pres:'Consulta no consultório, em Serra – ES. O endereço vai na confirmação.',online:'Por chamada de vídeo, de qualquer lugar do Brasil.'};
+function drawDates(){let h='';for(let i=0;i<21;i++){const s=addDays(i),dw=LB.dow(s),fr=LB.freeSlots(s).length,[,,d]=s.split('-');
+ const wd=['dom','seg','ter','qua','qui','sex','sáb'][dw];
+ h+=`<button type="button" data-d="${s}" class="${s===sel?'sel':''}" ${fr?'':'disabled'}><small>${i===0?'hoje':i===1?'amanhã':wd}</small><b>${+d}</b><em>${fr?fr+' livre'+(fr>1?'s':''):LB.HOURS[dw]?'lotado':'fechado'}</em></button>`}
+ $('#dates').innerHTML=h}
+function drawTimes(){if(!sel){$('#times').innerHTML='<p class="none">Escolha um dia primeiro.</p>';return}
+ const fr=LB.freeSlots(sel);if(selT&&!fr.includes(selT))selT=null;
+ $('#times').innerHTML=fr.length?fr.map(t=>`<button type="button" data-t="${t}" class="${t===selT?'sel':''}">${t}</button>`).join(''):'<p class="none">Sem horário livre nesse dia.</p>';sum()}
+function sum(){const s=$('#sum');if(sel&&selT){s.classList.remove('empty');s.innerHTML=`${LB.MOD[mod()]} · ${LB.fmt(sel)} às ${selT}`}else{s.classList.add('empty');s.textContent=sel?'Agora escolha o horário.':'Escolha o dia e o horário ao lado.'}}
+function modChange(){$('#modnote').textContent=NOTE[mod()];$('#endL').hidden=mod()!=='dom';sum()}
+$$('#mods input').forEach(i=>i.addEventListener('change',modChange));
+$('#dates').addEventListener('click',e=>{const b=e.target.closest('[data-d]');if(!b||b.disabled)return;sel=b.dataset.d;drawDates();drawTimes()});
+$('#times').addEventListener('click',e=>{const b=e.target.closest('[data-t]');if(!b)return;selT=b.dataset.t;drawTimes();if(innerWidth<900)setTimeout(()=>$('#formBox').scrollIntoView({behavior:'smooth',block:'start'}),80)});
+
+const f=$('#f');
+try{const me=get(K.me,{});if(me.nome)f.nome.value=me.nome;if(me.tel)f.tel.value=me.tel}catch(e){}
+f.addEventListener('submit',e=>{e.preventDefault();const nome=f.nome.value.trim(),tel=f.tel.value.replace(/\D/g,'');
+ if(!sel||!selT){$('#err').textContent='Escolha o dia e o horário.';$('#dates').scrollIntoView({behavior:'smooth',block:'center'});return}
+ if(!nome){$('#err').textContent='Coloque seu nome.';f.nome.focus();return}
+ if(tel.length<10){$('#err').textContent='Coloque um WhatsApp com DDD.';f.tel.focus();return}
+ if(mod()==='dom'&&!f.end.value.trim()){$('#err').textContent='Coloque o bairro e a cidade pra consulta em casa.';f.end.focus();return}
+ if(LB.taken(sel,selT)||!LB.freeSlots(sel).includes(selT)){$('#err').textContent='Esse horário acabou de ser ocupado. Escolha outro.';drawDates();drawTimes();return}
+ $('#err').textContent='';
+ const all=get(K.ap,[]);const a={id:Date.now(),code:'LB'+String(214+all.filter(x=>!x.ex).length),at:Date.now(),date:sel,time:selT,mod:mod(),mot:f.mot.value,pra:f.pra.value,nome,tel,end:mod()==='dom'?f.end.value.trim():'',obs:f.obs.value.trim().slice(0,200),status:'novo'};
+ all.unshift(a);set(K.ap,all);const mine=get(K.mine,[]);mine.unshift(a.id);set(K.mine,mine.slice(0,10));set(K.me,{nome,tel:f.tel.value.trim()});
+ showStatus(a.id);sel=null;selT=null;drawDates();drawTimes();myres();toast('Pedido enviado! Acompanhe aqui.')});
+
+let tracking=null;
+function showStatus(id){const a=get(K.ap,[]).find(x=>x.id===id);if(!a)return;tracking=id;f.hidden=true;const box=$('#status');box.hidden=false;
+ if(a.status==='cancelado'){box.innerHTML=`<p><span class="code">${a.code}</span></p><ul class="steps"><li class="cur on"><i>!</i><div><b>Horário não disponível</b><small>A nutricionista não consegue atender nesse horário. Escolha outro dia ou horário.</small></div></li></ul><button class="btn" type="button" id="again">Escolher outro horário</button>`;$('#again').onclick=back;return}
+ const order=['novo','confirmado','realizado'],idx=order.indexOf(a.status);
+ const S=[['Pedido recebido',`${LB.MOD[a.mod]} · ${esc(a.mot)}`],['Consulta confirmada',a.status==='novo'?'A nutricionista confirma pelo painel e você recebe no WhatsApp':'Te esperamos! O lembrete chega no WhatsApp na véspera'],['Consulta realizada','Plano alimentar e acompanhamento pelo WhatsApp']];
+ box.innerHTML=`<p style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="code">${a.code}</span><b>${LB.fmt(a.date)} · ${a.time}</b></p>
+ <ul class="steps">${S.map((s,i)=>`<li class="${i<idx?'on':i===idx?'on cur':''}"><i>${i<=idx?'✓':i+1}</i><div><b>${s[0]}</b><small>${s[1]}</small></div></li>`).join('')}</ul>
+ <div class="hint">👀 <b>Teste:</b> abra o <a href="painel.html" target="_blank" rel="noopener">painel da nutricionista</a> em outra aba, confirme a consulta ${a.code} e veja mudar aqui.</div>
+ <button class="btn ln" type="button" id="again" style="margin-top:12px;padding:10px 16px">Marcar outra consulta</button>`;$('#again').onclick=back}
+function back(){tracking=null;$('#status').hidden=true;f.hidden=false;drawDates();drawTimes()}
+function myres(){const m=get(K.mine,[]),a=get(K.ap,[]).find(x=>x.id===m[0]);$('#myres').classList.toggle('on',!!a)}
+$('#myres').onclick=()=>{const m=get(K.mine,[]);showStatus(m[0]);$('#formBox').scrollIntoView({behavior:'smooth',block:'start'})};
+const refresh=()=>{drawDates();if(!tracking)drawTimes();myres();if(tracking)showStatus(tracking)};
+LB.on(refresh);setInterval(refresh,4000);
+modChange();drawDates();drawTimes();myres();
+})();
+</script>
+</body>
+</html>
